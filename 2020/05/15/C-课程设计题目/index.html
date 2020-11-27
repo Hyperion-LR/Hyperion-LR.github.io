@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++/课程设计题目 | 冰箱主人のBlog</title><meta name="keywords" content="作业,课程设计"><meta name="author" content="冰箱的主人LR"><meta name="copyright" content="冰箱的主人LR"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="今天刚回到寝室老师就把课程设计的题目发下来了，在下面： 11道必做 123456789101112131415161718192021221 函数重载定义重载函数max3用于计算三个数的最大值（参数类型分别为int和double）。2 类的组合定义point类，数据成员包括x,y，成员函数包括构造函数，拷贝构造函数和析构函数，以及setx，getx，sety，gety四个属性函数。定义line类，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++&#x2F;课程设计题目">
+<meta property="og:url" content="http://example.com/2020/05/15/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E9%A2%98%E7%9B%AE/index.html">
+<meta property="og:site_name" content="冰箱主人のBlog">
+<meta property="og:description" content="今天刚回到寝室老师就把课程设计的题目发下来了，在下面： 11道必做 123456789101112131415161718192021221 函数重载定义重载函数max3用于计算三个数的最大值（参数类型分别为int和double）。2 类的组合定义point类，数据成员包括x,y，成员函数包括构造函数，拷贝构造函数和析构函数，以及setx，getx，sety，gety四个属性函数。定义line类，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/15/YsBMu9.jpg">
+<meta property="article:published_time" content="2020-05-15T09:05:44.000Z">
+<meta property="article:modified_time" content="2020-05-15T12:06:20.000Z">
+<meta property="article:author" content="冰箱的主人LR">
+<meta property="article:tag" content="作业">
+<meta property="article:tag" content="课程设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/15/YsBMu9.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2020/05/15/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E9%A2%98%E7%9B%AE/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 冰箱的主人LR","link":"链接: ","source":"来源: 冰箱主人のBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-05-15 20:06:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/buttons.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css"><meta name="generator" content="Hexo 5.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/05/15/YsBMu9.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">冰箱主人のBlog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">C++/课程设计题目</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-05-15T09:05:44.000Z" title="发表于 2020-05-15 17:05:44">2020-05-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-05-15T12:06:20.000Z" title="更新于 2020-05-15 20:06:20">2020-05-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>今天刚回到寝室老师就把课程设计的题目发下来了，在下面：</p>
+<p>11道必做</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> 函数重载</span><br><span class="line">定义重载函数max3用于计算三个数的最大值（参数类型分别为<span class="keyword">int</span>和<span class="keyword">double</span>）。</span><br><span class="line"><span class="number">2</span> 类的组合</span><br><span class="line">定义point类，数据成员包括x,y，成员函数包括构造函数，拷贝构造函数和析构函数，以及setx，getx，sety，gety四个属性函数。定义line类，端点由两个point类的对象组成，包括构造函数，析构函数以及计算线段长度的函数getlength。在main函数中，定义line的对象，并输出其长度。</span><br><span class="line"><span class="number">3</span> 对象数组和函数</span><br><span class="line">定义student类，数据成员包括姓名name和成绩score，成员函数包括构造函数，拷贝构造函数和析构函数。定义函数void highestscore(student s[]),输出分数最高的学生姓名和分数。在main函数中定义student s[N]，调用highestscore函数,输出分数最高的学生姓名和分数。</span><br><span class="line"><span class="number">4</span> 静态数据成员</span><br><span class="line">设计一个书类，能够保存书名、定价，所有书的本数和总价。（将书名和定价设计为普通数据成员；将书的本数和总价设计为静态数据成员）</span><br><span class="line"><span class="number">5</span> 动态内存分配</span><br><span class="line">定义point类，数据成员包括x,y，成员函数包括构造函数，拷贝构造函数和析构函数，以及setx，getx，sety，gety四个属性函数。在main函数中，用<span class="keyword">new</span>和<span class="keyword">delete</span>分配和释放N个point的数组。（N是<span class="keyword">const</span>常量，N=<span class="number">10</span>）</span><br><span class="line"><span class="number">6</span> 类的继承</span><br><span class="line">定义一个point类，包含私有数据成员x，y，成员函数包括无参构造函数，带参构造函数，<span class="built_in">set</span>和get属性函数。定义circle类，从point类公有派生，增加数据成员半径r，成员函数包括无参构造函数，带参构造函数，计算面积函数getarea。在main函数中定义一个circle的对象，并计算其面积。</span><br><span class="line"><span class="number">7</span> 虚基类</span><br><span class="line">定义vehicle类，数据成员包括私有的weight，公有的构造函数，析构函数和输出函数dispaly；从vehicle类公有派生car类，增加数据成员载人数personnum，公有的构造函数,析构函数和输出display；从vehicle类公有派生truck类，增加数据成员载货量laod,公有的构造函数，析构函数和输出函数display；从car类和truck类共同公有派生出pickup类，包括公有的构造函数和输出函数。在main函数中，定义pickup类对象，并输出其基本信息。</span><br><span class="line"><span class="number">8</span> 运算符重载，友元函数和<span class="keyword">this</span>指针</span><br><span class="line">定义一个计数器类counter，具备自增，自减功能（前后缀）；输入输出&gt;&gt;,&lt;&lt;功能。在main函数里测试该类。</span><br><span class="line"><span class="number">9</span> 虚函数和抽象类</span><br><span class="line">定义一个抽象类shape，包括公有的计算面积area函数，计算体积volume函数，输出基本信息函数printinfo（三个函数均为纯虚函数）。从shape公有派生point类，增加私有数据成员x,y坐标，以及构造函数，析构函数。从point公有派生circle类，增加私有数据成员半径r，以及构造函数，析构函数。从circle公有派生cylinder类，增加私有数据成员高度h，以及构造函数，析构函数。（在定义三个派生类的过程中，自己考虑需要重定义哪个虚函数）。在main函数中，定义shape类的指针，指向派生类的对象，输出三类对象的基本信息，面积，体积；（将shape指针改为引用再尝试）。</span><br><span class="line"><span class="number">10</span> 模板</span><br><span class="line">设计一个堆栈的类模板Stack，在模板中用类型参数T表示栈中存放的数据，用非类型参数MAXSIZE代表栈的大小。</span><br><span class="line"><span class="number">11</span> 文件读写</span><br><span class="line">定义学生类数组，有N个人（N=<span class="number">5</span>），包括姓名和语数外三名课的成绩，通过重载&lt;&lt;和&gt;&gt;运算符实现学生数组的文件读写。（姓名用<span class="built_in">string</span> name;）</span><br></pre></td></tr></table></figure>
+
+<p>还有几道选做：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>通信录的设计</span><br><span class="line">基本要求：</span><br><span class="line">定义人员（person）类，其中至少包括姓名、性别、电话、地址、邮政编码、邮箱、QQ号和类别（例如：同学、朋友等）。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入功能：输入人员信息，并保存到文件中；</span><br><span class="line">       <span class="number">3</span>、查询功能：</span><br><span class="line">           <span class="number">1</span>）能够根据姓名、电话精确查询人员信息；</span><br><span class="line">           <span class="number">2</span>）能够根据地址进行模糊查询人员信息；</span><br><span class="line">	       <span class="number">3</span>）根据人员类别查询人员信息</span><br><span class="line">       <span class="number">4</span>、根据姓名对人员信息排序输出</span><br><span class="line">       <span class="number">5</span>、能根据姓名、电话修改人员信息</span><br><span class="line">       <span class="number">6</span>、能根据姓名、电话删除人员信息</span><br><span class="line"><span class="number">2</span>职工工资管理</span><br><span class="line">基本要求：</span><br><span class="line">定义职工（employee ）类，其中至少包括姓名、性别、工号、电话、所在科室和工资。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入功能：输入职工信息，并保存到文件中；</span><br><span class="line">       <span class="number">3</span>、查询功能：</span><br><span class="line">           <span class="number">1</span>）能够根据工号精确查询职工信息；</span><br><span class="line">           <span class="number">2</span>）能够根据姓名、科室查询职工信息</span><br><span class="line">	       <span class="number">3</span>）分科室进行工资统计，计算各科室的平均工资</span><br><span class="line">       <span class="number">4</span>、根据职工的工资排序输出</span><br><span class="line">       <span class="number">5</span>、根据工号修改职工信息</span><br><span class="line">       <span class="number">6</span>、根据工号删除职工信息</span><br><span class="line"><span class="number">3</span>公司员工管理系统</span><br><span class="line">基本要求：</span><br><span class="line">设计一个虚基类Staff（员工），包括编号、姓名和年龄保护数据成员以及相关的成员函数；由Staff派生出工程师类Engineer包含专业和职称保护数据成员以及相关的成员函数，再由Staff派生出领导类Leader，包括职务和部门保护数据成员以及相关的成员函数；然后由Engineer和Leader类派生出主任工程师类Chairman。</span><br><span class="line">功能要求：</span><br><span class="line"><span class="number">1</span>、增加员工数据信息</span><br><span class="line"><span class="number">2</span>、更新员工数据信息</span><br><span class="line"><span class="number">3</span>、查询员工数据信息</span><br><span class="line"><span class="number">4</span>、删除员工数据信息</span><br><span class="line"><span class="number">5</span>、良好的人际交互界面、方便操作</span><br><span class="line"><span class="number">4</span>三角形的种类与面积</span><br><span class="line">基本要求：</span><br><span class="line">定义点（point）类，包含点的坐标x和y；通过继承点类派生出线段（line）类；通过线段（line）类的组合定义三角形（triangle ）类。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入三角形的三个顶点坐标；</span><br><span class="line">       <span class="number">3</span>、判断三角形的种类（一般三角形、等腰三角形、等边三角形、直角三角形和不能构成三角形）；</span><br><span class="line">       <span class="number">4</span>、计算并输出三角形的面积 。      </span><br><span class="line"><span class="number">5</span>字符串类的设计</span><br><span class="line">基本要求：</span><br><span class="line">定义点字符串（<span class="built_in">string</span>）类，包含存放字符串的字符数组和字符串中字符的个数。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、字符串的输入与赋值;</span><br><span class="line">       <span class="number">3</span>、字符串的运算，包括：</span><br><span class="line">            <span class="number">1</span>）连接     <span class="number">2</span>）复制       <span class="number">3</span>）查找  </span><br><span class="line">            <span class="number">4</span>）交换     <span class="number">5</span>）求子串    <span class="number">6</span>）比较</span><br><span class="line">       <span class="number">4</span>、字符串的输出</span><br><span class="line"><span class="number">6</span>学生成绩管理</span><br><span class="line">基本要求：</span><br><span class="line">定义学生（student）类，其中至少包括姓名、性别、学号、班级和四门功课的成绩。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入功能：输入学生信息，并保存到文件中；</span><br><span class="line">       <span class="number">3</span>、计算每个学生的总分与平均分并排序</span><br><span class="line">       <span class="number">4</span>、能根据学号修改学生信息</span><br><span class="line">       <span class="number">5</span>、能根据学号删除学生信息</span><br><span class="line">       <span class="number">6</span>、查询功能：</span><br><span class="line">            <span class="number">1</span>）能够根据学号查询学生信息；</span><br><span class="line">            <span class="number">2</span>）能够根据姓名、班级查询学生信息</span><br><span class="line">	        <span class="number">3</span>）统计学生成绩，按照班级和科目计算平均分。</span><br><span class="line"><span class="number">7</span>几何体的表面积与体积</span><br><span class="line">基本要求：</span><br><span class="line">定义一个抽象类形状（shape），包含输入基本图形的信息函数input()、显示基本图形信息函数disp()、计算表面积的函数area()、计算体积的函数volume()，它们均为纯虚函数。通过继承形状类派生出球体类、正方体类、长方体类、圆柱体类。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入各种形状信息；</span><br><span class="line">       <span class="number">3</span>、显示各种形状信息；</span><br><span class="line">       <span class="number">4</span>、计算各种形状的表面积；</span><br><span class="line">       <span class="number">5</span>、计算各种形状的体积；      </span><br><span class="line"><span class="number">8</span>学生信息管理</span><br><span class="line">基本要求：</span><br><span class="line">定义学生（student）类，其中至少包括姓名、性别、学号、班级和联系电话。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入功能：输入学生信息，并保存到文件中；</span><br><span class="line">       <span class="number">3</span>、能按照学生的学号排序</span><br><span class="line">       <span class="number">4</span>、能根据学号修改学生信息</span><br><span class="line">       <span class="number">5</span>、能根据学号删除学生信息</span><br><span class="line">       <span class="number">6</span>、查询功能：</span><br><span class="line">            <span class="number">1</span>）能够根据学号查询学生信息；</span><br><span class="line">            <span class="number">2</span>）能够根据姓名、学号、班级等查询学生信息</span><br><span class="line">	        <span class="number">3</span>）按照班级统计学生人数。</span><br><span class="line"><span class="number">9</span>教职工信息管理</span><br><span class="line">基本要求：</span><br><span class="line">定义职工（employee ）类，其中至少包括姓名、性别、工号、电话、所在系部和职称。</span><br><span class="line">功能要求：</span><br><span class="line">       <span class="number">1</span>、设计菜单实现功能选择；   </span><br><span class="line">       <span class="number">2</span>、输入功能：输入职工信息，并保存到文件中；</span><br><span class="line">       <span class="number">3</span>、查询功能：</span><br><span class="line">           <span class="number">1</span>）能够根据工号精确查询职工信息；</span><br><span class="line">           <span class="number">2</span>）能够根据姓名、科室查询职工信息</span><br><span class="line">	       <span class="number">3</span>）分系部进行职称统计，计算各职称的人数</span><br><span class="line">       <span class="number">4</span>、根据职工的职称排序输出</span><br><span class="line">       <span class="number">5</span>、根据工号修改职工信息</span><br><span class="line">       <span class="number">6</span>、根据工号删除职工信息</span><br><span class="line"><span class="number">10</span>复数计算器</span><br><span class="line">基本要求：</span><br><span class="line">定义复数（<span class="built_in">complex</span> ）类，其中至少包括实部和虚部，对复数类实现尽可能丰富的运算。</span><br><span class="line">功能要求：</span><br><span class="line"><span class="number">1</span>）建立复数类</span><br><span class="line"><span class="number">2</span>）复数信息的初始化</span><br><span class="line"><span class="number">3</span>）复数信息的输出</span><br><span class="line"><span class="number">4</span>）将复数信息保存为文件</span><br><span class="line"><span class="number">5</span>）求复数的绝对值</span><br><span class="line"><span class="number">6</span>）实现复数的加、减、乘、除、乘方、自加、自减等运算</span><br></pre></td></tr></table></figure>
+
+<p>除了前面11道必做以外我还要选做第6个学生成绩管理（虽然说是选做但好像不是我选。。。），我会尽快做好自己的部分（11道必做和第6个学生成绩管理），如果时间有多就看看其他的吧！</p>
+<p>呐，就这样。</p>
+<p><img src="/img/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E9%A2%98%E7%9B%AE/61573255_p0.jpg"></p>
+<p>​                                                                                                                                                                2020 年 5 月 15日</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">冰箱的主人LR</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2020/05/15/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E9%A2%98%E7%9B%AE/">http://example.com/2020/05/15/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E9%A2%98%E7%9B%AE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">冰箱主人のBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BD%9C%E4%B8%9A/">作业</a><a class="post-meta__tags" href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/">课程设计</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/05/15/YsBMu9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/05/16/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1(%E5%BF%85%E5%81%9A)/"><img class="prev-cover" src="https://s1.ax1x.com/2020/05/17/YRhYrj.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">C++课程设计(必做)</div></div></a></div><div class="next-post pull-right"><a href="/2020/05/05/%E9%93%BE%E8%A1%A8/"><img class="next-cover" src="https://s1.ax1x.com/2020/05/05/YFdwrV.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">链表</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/11/27/数据结构与算法课程设计/" title="赫夫曼树（数据结构与算法课程设计）"><img class="cover" src="/img/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/wallhaven-ym1jpg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-27</div><div class="title">赫夫曼树（数据结构与算法课程设计）</div></div></a></div><div><a href="/2020/05/16/C-课程设计(必做)/" title="C++课程设计(必做)"><img class="cover" src="https://s1.ax1x.com/2020/05/17/YRhYrj.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-06-04</div><div class="title">C++课程设计(必做)</div></div></a></div><div><a href="/2020/05/17/C-课程设计（选做6）/" title="C++课程设计（选做6）"><img class="cover" src="/img/C-%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E9%80%89%E5%81%9A6%EF%BC%89/73891517_p0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-06-08</div><div class="title">C++课程设计（选做6）</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">冰箱的主人LR</div><div class="author-info__description">世人皆傻逼，我也应如是</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/297987258" target="_blank" title="BiliBili"><i class="fas fa-bold"></i></a><a class="social-icon" href="https://github.com/Hyperion-LR" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:Hyperion-LR@QQ.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=ev9KWe2-w42IurHpFi5Ngrh0UpXa4lfk&amp;noverify=0" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">手贱删了一些东西导致出了点问题，许多功能待完善o(T-T)o......</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" title="赫夫曼树（数据结构与算法课程设计）"><img src="/img/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/wallhaven-ym1jpg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="赫夫曼树（数据结构与算法课程设计）"/></a><div class="content"><a class="title" href="/2020/11/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" title="赫夫曼树（数据结构与算法课程设计）">赫夫曼树（数据结构与算法课程设计）</a><time datetime="2020-11-27T13:24:06.000Z" title="发表于 2020-11-27 21:24:06">2020-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/22/Codeforces-Round-685-Div-2/" title="Codeforces Round #685 (Div. 2)"><img src="/img/Codeforces-Round-685-Div-2/top.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Codeforces Round #685 (Div. 2)"/></a><div class="content"><a class="title" href="/2020/11/22/Codeforces-Round-685-Div-2/" title="Codeforces Round #685 (Div. 2)">Codeforces Round #685 (Div. 2)</a><time datetime="2020-11-22T06:33:29.000Z" title="发表于 2020-11-22 14:33:29">2020-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Codeforces-Educational-Codeforces-Round-98-Rated-for-Div-2-A-B-C-D/" title="Codeforces Educational Codeforces Round 98 (Rated for Div. 2) A_B_C_D"><img src="/img/Codeforces-Educational-Codeforces-Round-98-Rated-for-Div-2-A-B-C-D/1589430381526.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Codeforces Educational Codeforces Round 98 (Rated for Div. 2) A_B_C_D"/></a><div class="content"><a class="title" href="/2020/11/20/Codeforces-Educational-Codeforces-Round-98-Rated-for-Div-2-A-B-C-D/" title="Codeforces Educational Codeforces Round 98 (Rated for Div. 2) A_B_C_D">Codeforces Educational Codeforces Round 98 (Rated for Div. 2) A_B_C_D</a><time datetime="2020-11-20T12:56:39.000Z" title="发表于 2020-11-20 20:56:39">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/16/ICPC2020%E6%B1%9F%E8%A5%BF%E7%9C%81%E8%B5%9B-%E6%84%BF%E9%A3%8E%E7%A5%9E%E5%BF%BD%E6%82%A0%E4%BD%A0/" title="ICPC2020江西省赛_愿风神忽悠你"><img src="https://s3.ax1x.com/2020/11/16/DEGinO.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ICPC2020江西省赛_愿风神忽悠你"/></a><div class="content"><a class="title" href="/2020/11/16/ICPC2020%E6%B1%9F%E8%A5%BF%E7%9C%81%E8%B5%9B-%E6%84%BF%E9%A3%8E%E7%A5%9E%E5%BF%BD%E6%82%A0%E4%BD%A0/" title="ICPC2020江西省赛_愿风神忽悠你">ICPC2020江西省赛_愿风神忽悠你</a><time datetime="2020-11-16T14:13:58.000Z" title="发表于 2020-11-16 22:13:58">2020-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/%E5%89%8D%E7%BC%80%E5%92%8C-%E5%B7%AE%E5%88%86/" title="前缀和/差分"><img src="https://s3.ax1x.com/2020/11/14/D9gcIU.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前缀和/差分"/></a><div class="content"><a class="title" href="/2020/11/13/%E5%89%8D%E7%BC%80%E5%92%8C-%E5%B7%AE%E5%88%86/" title="前缀和/差分">前缀和/差分</a><time datetime="2020-11-13T15:09:13.000Z" title="发表于 2020-11-13 23:09:13">2020-11-13</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://s1.ax1x.com/2020/05/15/YsBMu9.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By 冰箱的主人LR</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,  welcome  to  my  <a  target="_blank" rel="noopener" href="https://Hyperion-LR.gitee.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'D5RJyosWcTaoO9XuDhy2iAeI-gzGzoHsz',
+      appKey: 'jammg4NJ90rPj7bbaNphgJdj',
+      placeholder: '说点什么吧！',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/hideMobileSidebar.js"></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script><script src="/js/daovoice.js"></script><script src="/js/background.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="255,255,255" opacity="1" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/.js","daovoice")
+</script><script>var isChatBtn = false
+daovoice('init', {
+  app_id: '',},{
+  launcher: { 
+     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+  },
+});
+daovoice('update');
+
+if (isChatBtn) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      daovoice('show')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: true // 悬浮 ICON 是否显示
+        },
+      });
+    }
+    function chatBtnShow () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: false // 悬浮 ICON 是否显示
+        },
+      });
+    }
+  }
+}</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/fox.model.json"},"display":{"position":"right","width":275,"height":420},"mobile":{"show":true}});</script></body></html>
