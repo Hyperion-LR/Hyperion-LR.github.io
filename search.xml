@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>字符串KMP(快速模式匹配）</title>
+      <link href="2021/03/17/%E5%AD%97%E7%AC%A6%E4%B8%B2KMP-%E5%BF%AB%E9%80%9F%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%EF%BC%89/"/>
+      <url>2021/03/17/%E5%AD%97%E7%AC%A6%E4%B8%B2KMP-%E5%BF%AB%E9%80%9F%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h1 id="KMP-算法（Knuth-Morris-Pratt-）"><a href="#KMP-算法（Knuth-Morris-Pratt-）" class="headerlink" title="KMP 算法（Knuth-Morris-Pratt ）"></a>KMP 算法（Knuth-Morris-Pratt ）</h1><p>KMP 算法是一个著名的字符串匹配算法，效率很高。我们普通的暴力算法时间复杂度能到$O_(n * m)$,虽然在一般情况下已经够用但还是有很多情况下过不了题。所以我们需要用到更高效的算法。</p><h1 id="暴力的不足"><a href="#暴力的不足" class="headerlink" title="暴力的不足"></a>暴力的不足</h1><p>我们先看看普通暴力模式下的不足</p><p><img src="/.com//img/%E5%AD%97%E7%AC%A6%E4%B8%B2KMP%E5%BF%AB%E9%80%9F%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D/0.jpg"></p><p>当我们在$S$串中寻找$T$时普通的表里是我们从第一位开始依次匹配当匹配到第四位时发现不同</p><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> Next[<span class="number">1007</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetNext</span><span class="params">(<span class="built_in">string</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">-1</span>;</span><br><span class="line">    Next[<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;t.length() - <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">-1</span> || t[i] == t[j])</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">            j++;</span><br><span class="line">            <span class="keyword">if</span>(t[i] != t[j])</span><br><span class="line">            &#123;</span><br><span class="line">                Next[i] = j;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                Next[i] = Next[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> j = Next[j];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kmp</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">string</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    GetNext(t);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; s.length(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; s[i] != t[j])</span><br><span class="line">        &#123;</span><br><span class="line">            j = Next[j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (s[i] == t[j])</span><br><span class="line">        &#123;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (j == t.length())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> i - t.length() + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s,t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s &gt;&gt; t;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; kmp(s, t) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; Next[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/.com//img/%E5%AD%97%E7%AC%A6%E4%B8%B2KMP%E5%BF%AB%E9%80%9F%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D/86916117_p0.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> DFS </tag>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>瓷砖样式(DFS)</title>
       <link href="2021/03/14/%E7%93%B7%E7%A0%96%E6%A0%B7%E5%BC%8F-DFS/"/>
       <url>2021/03/14/%E7%93%B7%E7%A0%96%E6%A0%B7%E5%BC%8F-DFS/</url>
@@ -255,11 +284,11 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> ACM </tag>
             
             <tag> ICPC </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
