@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>关于第Spring Boot博客后端项目的改进</title>
+      <link href="2021/10/28/%E5%85%B3%E4%BA%8E%E7%AC%ACSpring-Boot%E5%8D%9A%E5%AE%A2%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%94%B9%E8%BF%9B/"/>
+      <url>2021/10/28/%E5%85%B3%E4%BA%8E%E7%AC%ACSpring-Boot%E5%8D%9A%E5%AE%A2%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%94%B9%E8%BF%9B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先感谢学长晚上下班后深夜还要帮我指出项目的不足，再此非常感谢。</p><h1 id="ignore"><a href="#ignore" class="headerlink" title=".ignore"></a>.ignore</h1><p>首先我在使用git上传的时候把.idea文件夹中的内容也提交上去了，这里面放的是一些项目的配置信息，包括历史记录，版本控制信息等。没必要上传git，并且导致一个原本很小的内存一百多M。</p><p>这个在IDEA安装<code>.ignore</code>插件将不用上传的东西选上就好。</p><h1 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h1><h2 id="线程数依据"><a href="#线程数依据" class="headerlink" title="线程数依据"></a>线程数依据</h2><p>我在写项目的过程中对于一些不怎么影响主线程的操作用的多线程去执行，所以要配置线程池。但是对于线程池的一些配置则完全是乱配的。学长告诉我规范。</p><ul><li>当我们的系统IO操作比较频繁的时候(比如数据库读写)，我们一般设置为2 * n.</li><li>当我们的系统cpu操作频繁的时候一般设置为n + 1.</li></ul><p>(这里的n表示服务器cpu的核心数)</p><h2 id="任务队列大小"><a href="#任务队列大小" class="headerlink" title="任务队列大小"></a>任务队列大小</h2><p>这个和消息队列类似，当我们的线程池满了的时候可以将新的请求放入队列，等待线程池里面线程运行结束。但是我们的队列会放在内存中所以我们必须设置限制防止队列过大撑爆内存。其大小不能超过系统能容纳的上限。</p><h2 id="线程池要注意的点"><a href="#线程池要注意的点" class="headerlink" title="线程池要注意的点"></a>线程池要注意的点</h2><p>其实如果没什么要求的话可以用Spring自带的线程池，任务队列大小设置为系统容纳大小。</p><p>线程池的执行机制。</p><h1 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h1><p>缓存用aop切面处理不会破坏原来的任务，但是缓存一般作用于service而不是controller。</p><p>缓存的使用场景：</p><ul><li>读比较多，写入比较少。</li><li>热点数据需要实时更新。</li><li>数据丢失故障率比较小。(数据丢失对系统没啥影响)</li></ul><p>所以例如最热数据，点击量，浏览量等数据一般加缓存，而文章列表这种用户实时操作的数据不可以加缓存。</p><p>同时缓存可以用@SpringCache实现。</p><p><strong>注意</strong></p><p>缓存与数据库一致性问题。</p><p>要定期将缓存中的数据回写到数据库。</p><h1 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h1><p>jwt和token+redis是两种鉴权方式。</p><h1 id="Service与Controller解耦"><a href="#Service与Controller解耦" class="headerlink" title="Service与Controller解耦"></a>Service与Controller解耦</h1><p>service只负责返回数据，不负责包装成Result对象。直接返回相应数据即可，在Controller中包装成前端需要的Result。</p><p>Controller返回Result的时候可以将不同的Result分类比如PageResult，ArticleResult等。</p><p>Controller的各类参数前端给，假如需求更改前端必然要改样式，后端更改数据耗时。</p><h2 id="Controller层执行模板"><a href="#Controller层执行模板" class="headerlink" title="Controller层执行模板"></a>Controller层执行模板</h2><p>可以写一个controller的执行模板，之后对controller的处理比较方便类似于aop但是切面不好调试。</p><h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>可以使用重载返回Result的状态码。同时枚举的状态码要统一也可以设置为错误信息。</p><p><strong>注意</strong></p><p>不能向外界透露任何系统内部信息，状态码是给系统内部看的，前端返回提醒的数据在Result的data里面。</p><h1 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h1><p><code>@Autowired</code>注解会提示过时可以用<code>@Resource</code>注解，最好不要用构造器注入。</p><p><strong>区别</strong></p><ul><li>@Autowired是基于Spring规范开发，在实现注入功能的时候是基于By type的方式去注入</li><li>@Resource是基于Java的规范开发，在实现注入功能的时候是基于By name的方式来注入</li></ul><p>By name ：根据被注解的属性的name，在Spring容器中查找相同名字的bean</p><p>By type ：根据被注解的属性的class，在容器中查找相同class的bean</p><h1 id="魔法值"><a href="#魔法值" class="headerlink" title="魔法值"></a>魔法值</h1><p>魔法值有些时候不能很清楚的表达意思，最好建立一个常量包。尤其是一些字符用常量包加上注解能很好的表达意思。</p><h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>注释要写规范，写明这个类，方法是干什么用的。</p><h1 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h1><p>可以看下log4j2比较规范。</p><h1 id="空指针"><a href="#空指针" class="headerlink" title="空指针"></a>空指针</h1><p>很多情况获得的对象要小心为空的情况。可以用：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assert.notNull(object, <span class="string">&quot;msg&quot;</span>);</span><br></pre></td></tr></table></figure><p>来检查是否为空。</p><p>两个字符串对象也是可以使用：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringUtils.equals(s1, s2);</span><br></pre></td></tr></table></figure><p>防止为空有一个字符串为空。</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>目前大概这么多，要改的东西还有很多得慢慢来。</p><p>2021 年 10 月 28 日</p><p><img src="/.com//../../../img/%E5%85%B3%E4%BA%8E%E7%AC%ACSpring-Boot%E5%8D%9A%E5%AE%A2%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%94%B9%E8%BF%9B/img.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Spring Boot </tag>
+            
+            <tag> 后端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>从第一个Spring Boot项目学到的东西</title>
       <link href="2021/10/27/%E4%BB%8E%E7%AC%AC%E4%B8%80%E4%B8%AASpring-Boot%E9%A1%B9%E7%9B%AE%E5%AD%A6%E5%88%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/"/>
       <url>2021/10/27/%E4%BB%8E%E7%AC%AC%E4%B8%80%E4%B8%AASpring-Boot%E9%A1%B9%E7%9B%AE%E5%AD%A6%E5%88%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/</url>
@@ -128,9 +157,9 @@
       
         <tags>
             
-            <tag> ICPC </tag>
-            
             <tag> ACM </tag>
+            
+            <tag> ICPC </tag>
             
             <tag> 算法 </tag>
             
@@ -259,9 +288,9 @@
       
         <tags>
             
-            <tag> ICPC </tag>
-            
             <tag> ACM </tag>
+            
+            <tag> ICPC </tag>
             
         </tags>
       
@@ -286,9 +315,9 @@
       
         <tags>
             
-            <tag> ICPC </tag>
-            
             <tag> ACM </tag>
+            
+            <tag> ICPC </tag>
             
         </tags>
       
@@ -448,9 +477,9 @@
       
         <tags>
             
-            <tag> ICPC </tag>
-            
             <tag> ACM </tag>
+            
+            <tag> ICPC </tag>
             
             <tag> 算法 </tag>
             
