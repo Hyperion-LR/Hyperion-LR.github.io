@@ -66,7 +66,7 @@
       <link href="2022/03/01/%E5%86%8D%E9%9D%A2%E5%AD%97%E8%8A%82-%E9%A3%9E%E4%B9%A6-java-%E9%9D%A2%E7%BB%8F/"/>
       <url>2022/03/01/%E5%86%8D%E9%9D%A2%E5%AD%97%E8%8A%82-%E9%A3%9E%E4%B9%A6-java-%E9%9D%A2%E7%BB%8F/</url>
       
-        <content type="html"><![CDATA[<h1 id="字节跳动面经"><a href="#字节跳动面经" class="headerlink" title="字节跳动面经"></a>字节跳动面经</h1><h2 id="飞书Java"><a href="#飞书Java" class="headerlink" title="飞书Java"></a>飞书Java</h2><p><strong>2022/3/1 一面（45分钟）</strong></p><ol><li><p>自我介绍</p></li><li><p>项目是给自己用还是别人用，在哪里跑的。学了哪些学位课，计算机网络知道吗，了解哪些。</p></li><li><p>浏览器打开一个链接后的过程（讲了dns，tcp连接，ssl连接，发送报文）</p></li><li><p>域名解析用的什么协议（不知道，然后他就问你们上课老师没展示过这些吗）</p></li><li><p>SSL握手的流程（这里说的不太好，少说了一个步骤）</p></li><li><p>Linux学习过吗</p></li><li><p>Linux常用命令行（查看进程，端口这些，面试官看我好像不太会就没问了）</p></li><li><p>四次挥手</p></li><li><p>TIME_WAIT,CLOSE_WAIT的作用</p></li><li><p>进程的调度方式</p></li><li><p>进程线程的区别</p></li><li><p>进程之间的通信</p></li><li><p>线程之间的通信（这里应该多讲一点的）</p></li><li><p>redis单线程的情况</p></li><li><p>redis数据结构以及用途场景</p></li><li><p>会C++吗？（表示不会，不过可以敲算法题）</p></li><li><p>两算法题</p><ul><li>给一个int类型的数据返回倒数第二个字节的数据（左移两字节然后和两个字节与运算就好）</li><li>求一颗树的最大深度（相信大家比我更会）</li></ul></li><li><p>手写一个设计模式（出了单例，工厂之外写一个，具体讲讲）</p></li><li><p>反问</p><p>对自己的建议（多学学Linux，设计模式可以不写简历上我手撕的比较慢，计算机网络可以多看看底层，还有英语要学好）</p><p>能过吗（面试官说他比较好过，但是二面换一个面试官就不知道了因为我简历上写了好多东西其实真问起来会好难）</p></li></ol><p>我发现字节的面试官都好好（目前来说），问到我哪里不太会了之后就立马打住。</p><p><strong>2022/3/7 二面 （62分钟）</strong></p><p>算法：最长上升子序列（但是要把结果输出）</p><ol><li>ping的底层实现（不知道）</li><li>icmp知道吗（不知道）</li><li>tcp的拥塞控制</li><li>DNS协议</li><li>HTTP了解吗，request的结构</li><li>请求行里有啥</li><li>请求头里有什么字段</li><li>请求方法有哪些（get，post，put，幂等性）</li><li>https的理解，ssl的连接过程</li><li>ca证书怎么验证（不知道）</li><li>数据库的隔离级别，MySQL的默认隔离级别（他问我的MySQL的版本）</li><li>索引的数据结构</li><li>联合索引的实现</li><li>最左匹配原则</li><li>cap理论</li><li>网络安全</li><li>java的类加载机制</li><li>泛型的实现原理</li><li>你的项目是分布式的吗</li><li>用户如果提交代码会不会引起你项目的崩溃。</li></ol><p>又挂了，字节估计与我无缘了。</p><p>更新一下，晚上八点hr打电话来说过了。。。有些奇怪其实答得不是很好。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="字节跳动面经"><a href="#字节跳动面经" class="headerlink" title="字节跳动面经"></a>字节跳动面经</h1><h2 id="飞书Java"><a href="#飞书Java" class="headerlink" title="飞书Java"></a>飞书Java</h2><p><strong>2022/3/1 一面（45分钟）</strong></p><ol><li><p>自我介绍</p></li><li><p>项目是给自己用还是别人用，在哪里跑的。学了哪些学位课，计算机网络知道吗，了解哪些。</p></li><li><p>浏览器打开一个链接后的过程（讲了dns，tcp连接，ssl连接，发送报文）</p></li><li><p>域名解析用的什么协议（不知道，然后他就问你们上课老师没展示过这些吗）</p></li><li><p>SSL握手的流程（这里说的不太好，少说了一个步骤）</p></li><li><p>Linux学习过吗</p></li><li><p>Linux常用命令行（查看进程，端口这些，面试官看我好像不太会就没问了）</p></li><li><p>四次挥手</p></li><li><p>TIME_WAIT,CLOSE_WAIT的作用</p></li><li><p>进程的调度方式</p></li><li><p>进程线程的区别</p></li><li><p>进程之间的通信</p></li><li><p>线程之间的通信（这里应该多讲一点的）</p></li><li><p>redis单线程的情况</p></li><li><p>redis数据结构以及用途场景</p></li><li><p>会C++吗？（表示不会，不过可以敲算法题）</p></li><li><p>两算法题</p><ul><li>给一个int类型的数据返回倒数第二个字节的数据（左移两字节然后和两个字节与运算就好）</li><li>求一颗树的最大深度（相信大家比我更会）</li></ul></li><li><p>手写一个设计模式（出了单例，工厂之外写一个，具体讲讲）</p></li><li><p>反问</p><p>对自己的建议（多学学Linux，设计模式可以不写简历上我手撕的比较慢，计算机网络可以多看看底层，还有英语要学好）</p><p>能过吗（面试官说他比较好过，但是二面换一个面试官就不知道了因为我简历上写了好多东西其实真问起来会好难）</p></li></ol><p>我发现字节的面试官都好好（目前来说），问到我哪里不太会了之后就立马打住。</p><p><strong>2022/3/7 二面 （62分钟）</strong></p><p>算法：最长上升子序列（但是要把结果输出）</p><ol><li>ping的底层实现（不知道）</li><li>icmp知道吗（不知道）</li><li>tcp的拥塞控制</li><li>DNS协议</li><li>HTTP了解吗，request的结构</li><li>请求行里有啥</li><li>请求头里有什么字段</li><li>请求方法有哪些（get，post，put，幂等性）</li><li>https的理解，ssl的连接过程</li><li>ca证书怎么验证（不知道）</li><li>数据库的隔离级别，MySQL的默认隔离级别（他问我的MySQL的版本）</li><li>索引的数据结构</li><li>联合索引的实现</li><li>最左匹配原则</li><li>cap理论</li><li>网络安全</li><li>java的类加载机制</li><li>泛型的实现原理</li><li>你的项目是分布式的吗</li><li>用户如果提交代码会不会引起你项目的崩溃。</li></ol><p>又挂了，字节估计与我无缘了。</p><p>更新一下，晚上八点hr打电话来说过了。。。有些奇怪其实答得不是很好。</p><p><strong>2022/3/9    三面    （42分钟）</strong></p><p>学长跟我说三面都是聊天来着，结果就被忽悠了。</p><ol><li><p>大三吗，实习时间。</p></li><li><p>多线程交叉打印一个打印a,b,c一个打印1，2，3。</p></li><li><p>计算机网络了解吗。（怎么又是计算机网络。。。）</p></li><li><p>TCP和UDP的使用场景。</p></li><li><p>TCP的拥塞控制。（这部分说的不好）</p></li><li><p>HTTPS解决了什么问题。</p></li><li><p>非对称加密以及对称加密。</p></li><li><p>数据库的索引解决什么问题，怎么解决的。</p></li><li><p>为什么用B+树为什么不用B树。</p></li><li><p><code>select * from table where a = xxx;</code></p><p><code>select * from table where b = xxx;</code></p><p><code>select * from table where a = xxx and b = xxx;</code></p><p>怎么建索引（a，b和b）。</p></li><li><p>联合索引的数据结构则么实现的。</p></li><li><p>map用过哪些。</p></li><li><p>大量数据数据里面出现次数最多的。（第一次碰到这种题目）</p></li><li><p>堆的建立和遍历。</p></li><li><p>算法题：层序遍历二叉树</p></li><li><p>反问：对我的评价建议？（不告诉我，让我问HR。。。）</p></li></ol><p>不知道啥情况。</p>]]></content>
       
       
       <categories>
@@ -327,11 +327,11 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> ACM </tag>
             
             <tag> ICPC </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -647,11 +647,11 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> ACM </tag>
             
             <tag> ICPC </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
