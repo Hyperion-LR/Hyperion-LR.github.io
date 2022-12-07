@@ -4,6 +4,120 @@
   
     
     <entry>
+      <title>众安保险面经</title>
+      <link href="2022/05/04/%E4%BC%97%E5%AE%89%E4%BF%9D%E9%99%A9%E9%9D%A2%E7%BB%8F/"/>
+      <url>2022/05/04/%E4%BC%97%E5%AE%89%E4%BF%9D%E9%99%A9%E9%9D%A2%E7%BB%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="众安保险面经"><a href="#众安保险面经" class="headerlink" title="众安保险面经"></a>众安保险面经</h1><p><strong>4月26 一面</strong></p><ol><li>自我介绍</li><li>线程池多线程的创建方式</li><li>线程池七大参数，拒绝策略</li><li>线程池任务队列有哪些</li><li>ConcurrentHashMap以及底层数据结果，怎么实现的</li><li>SpringBoot的启动过程</li><li>Spring自带线程池，就是**@Async**注解</li><li>Spring常用注解</li><li>介绍一下微服务，微服务的好处（将各个功能的模块分开，降低耦合性）</li><li>Redis在项目里面的作用</li><li>缓存击穿，缓存雪崩，缓存穿透</li><li>set和zset区别</li><li>容器和虚拟化搞过吗</li><li>DFS和BFS和剪枝</li><li>最短路径</li><li>反问</li></ol><p>之后面试官就和我说了他们的部门是负责做什么的<br>面试官人很好</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 众安 </tag>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百度一，二面经</title>
+      <link href="2022/04/13/%E7%99%BE%E5%BA%A6%E4%B8%80%EF%BC%8C%E4%BA%8C%E9%9D%A2%E7%BB%8F/"/>
+      <url>2022/04/13/%E7%99%BE%E5%BA%A6%E4%B8%80%EF%BC%8C%E4%BA%8C%E9%9D%A2%E7%BB%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="百度一，二面经"><a href="#百度一，二面经" class="headerlink" title="百度一，二面经"></a>百度一，二面经</h1><p><strong>2022/4/10 一面（52分钟）</strong></p><ol><li>自我介绍</li><li>算法题：n皇后</li><li>java的垃圾回收</li><li>垃圾回收器，G1的优点（内存碎片，stop word时间可控）</li><li>MySQL的隔离级别</li><li>分布式事务</li><li>分布式锁</li><li>Redis为什么快</li><li>Redis单线程怎么同时处理多个请求</li><li>线程池的使用</li><li>多个线程怎么进行数据交换，修改</li><li>偏向锁，重量级锁</li><li>为什么要自旋锁</li><li>java的编译优化，锁消除</li><li>tcp和udp的区别</li><li>三握手四挥手，为什么</li></ol><p><strong>2022/4/10 二面（56分钟）</strong></p><ol><li>自我介绍</li><li>项目背景，最大的问题，具体实现</li><li>服务器连接数比较多会出现什么问题</li><li>Kafka分区的作用</li><li>final修饰哪些东西</li><li>不可变对象</li><li>为什么要不可变对象</li><li>深拷贝和浅拷贝的区别</li><li>实现深拷贝的方法（clone接口，反射，序列化）</li><li>单继承多继承</li><li>bean的初始化，多级缓存</li><li>MySQL查看当前命令有没有走索引</li><li>update是否走索引</li><li>范围查询是否走索引</li></ol><p>本来是有三面的，但是我好像把三面面试官鸽了。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 后端 </tag>
+            
+            <tag> java </tag>
+            
+            <tag> 百度 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网易-智慧企业事业部面经</title>
+      <link href="2022/04/07/%E7%BD%91%E6%98%93%E4%BA%92%E8%81%94%E7%BD%91-%E6%99%BA%E6%85%A7%E4%BC%81%E4%B8%9A%E4%BA%8B%E4%B8%9A%E9%83%A8/"/>
+      <url>2022/04/07/%E7%BD%91%E6%98%93%E4%BA%92%E8%81%94%E7%BD%91-%E6%99%BA%E6%85%A7%E4%BC%81%E4%B8%9A%E4%BA%8B%E4%B8%9A%E9%83%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="网易互联网-智慧企业事业部"><a href="#网易互联网-智慧企业事业部" class="headerlink" title="网易互联网-智慧企业事业部"></a>网易互联网-智慧企业事业部</h1><p><strong>2022/4/6 一面（42分钟）</strong></p><ol><li>自我介绍</li><li>项目背景，是否上线，是自己独立完成吗，流程，一些问题</li><li>用过容器吗，你理解的Docker</li><li>项目里面多线程的处理</li><li>BIO和NIO的区别与实现</li><li>Kafka在项目里怎么用的</li><li>为什么Kafka这么快（硬盘顺序读写，mmap零拷贝，多分区，内存分页缓存）</li><li>为什么数据库不能用零拷贝加快速度（没了解过）</li><li>Kafak分区的作用，分区数量的影响因素</li><li>Kafka多个消费者同时读一个分区可能会有什么问题（不清楚）</li><li>消费者怎么区分消息是否消费</li><li>为什么Redis这么快</li><li>Redis集群，哨兵模式，怎么实现高可用</li><li>Redis多主库集群怎么实现（不记得了）</li><li>有用过其他中间件吗（没了）</li><li>Spring Boot自动装配原理（不会）</li><li>Spring 容器，怎么实例化对象（简单说了下）</li><li>反射的基本原理，平时怎么用的</li><li>类加载后在哪里，字节码对象在哪里（方法区和堆内存）</li><li>对象是怎么获取字节码对象的（这里他一直引导我，但是我懵了，然后他问我对象头里什么就想起来了）</li><li>对象头里有什么（GC年龄，HashCode，锁状态，类元信息等）</li><li>栈内存里面有什么</li><li>反问</li></ol><p><strong>2022/4/6 二面（56分钟）</strong></p><p>没录音不记得了</p><p><strong>2022/4/15 hr面（16分钟）</strong></p><ol><li>自我介绍</li><li>介绍学生会的事情，收获（差点忘了自己在学生会干啥了，这里说的有点结巴）</li><li>项目的背景，遇到的问题</li><li>考研还是就业</li><li>除了课程以外的学习方式</li><li>在校比较有成就感的事情</li><li>怎么想到参加ACM的</li><li>省赛金牌是怎么来的</li><li>队友投入度不高怎么办</li><li>自己的短板</li><li>职业规划</li><li>实习时间</li><li>其他公司</li><li>对公司的要求</li><li>反问</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 后端 </tag>
+            
+            <tag> 网易 </tag>
+            
+            <tag> 智慧企业事业部 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>字节跳动 幸福里 后端 面经</title>
+      <link href="2022/03/21/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%87%82%E8%BD%A6%E5%B8%9D/"/>
+      <url>2022/03/21/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%87%82%E8%BD%A6%E5%B8%9D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="字节跳动面经"><a href="#字节跳动面经" class="headerlink" title="字节跳动面经"></a>字节跳动面经</h1><h2 id="懂车帝"><a href="#懂车帝" class="headerlink" title="懂车帝"></a>懂车帝</h2><p><strong>2022/3/21 一面（52分钟）</strong></p><ol><li><p>自我介绍</p></li><li><p>算法</p><ul><li><p>前序，中序构建二叉树</p></li><li><p>学生表，课程表，成绩表求总分前三名的学生</p></li></ul></li><li><p>数据库索引介绍</p></li><li><p>数据库执行引擎介绍</p></li><li><p>update 的操作具体流程</p></li><li><p>redo log， undo log， binlog介绍</p></li><li><p>联合索引怎么实现的</p></li><li><p>给两条SQL语句走没走联合索引</p></li><li><p>cookie和session的区别</p></li><li><p>session怎么存储</p></li><li><p>分布式里面怎么实现</p></li><li><p>分布式如果原本A服务器的一个请求发送到了B服务器怎么办</p></li><li><p>网络安全CSRF,XSS,DOSS,HTTPonly</p></li><li><p>redis的扩容机制</p></li><li><p>redis怎么实现高可用</p></li><li><p>分布式锁</p></li><li><p>设计一个高可用的系统</p><p>从15开始后面问了好几个问题听都没听懂就没写，感觉被刷KPI了。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 后端 </tag>
+            
+            <tag> 字节跳动 </tag>
+            
+            <tag> 懂车帝 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>蚂蚁集团-支付宝事业线-后端</title>
       <link href="2022/03/08/%E8%9A%82%E8%9A%81%E4%B8%80%E9%9D%A2/"/>
       <url>2022/03/08/%E8%9A%82%E8%9A%81%E4%B8%80%E9%9D%A2/</url>
@@ -564,9 +678,9 @@
       
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> C++ </tag>
             
             <tag> 作业 </tag>
             
@@ -1204,9 +1318,9 @@
       
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
       
